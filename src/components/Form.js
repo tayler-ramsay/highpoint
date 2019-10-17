@@ -1,5 +1,10 @@
 import React from "react"
 
+const encode = data => {
+  return Object.keys(data)
+    .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+    .join("&")
+}
 export default class Form extends React.Component {
   constructor(props) {
     super(props)
@@ -25,9 +30,16 @@ export default class Form extends React.Component {
     })
   }
 
-  handleSubmit(event) {
-    alert("A name was submitted: " + this.state.value)
-    event.preventDefault()
+  handleSubmit = e => {
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: encode({ "form-name": "contact", ...this.state }),
+    })
+      .then(() => alert("Success!"))
+      .catch(error => alert(error))
+
+    e.preventDefault()
   }
 
   render() {
