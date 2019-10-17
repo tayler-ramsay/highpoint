@@ -1,0 +1,20 @@
+html {
+  background-color: black;
+}
+body {
+  color: white;
+}
+
+h1 {
+  color: whitesmoke;
+}
+
+button {
+  font-size: 3rem;
+}
+
+a {
+  color: whitesmoke;
+  text-decoration: none;
+  text-shadow: none;
+}
