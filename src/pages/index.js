@@ -10,21 +10,21 @@ export default ({ data }) => (
     <div
       css={css`
         #myVid {
-          z-index: -20;
-          position: fixed;
-          top: 0;
-          left: 0;
-          bottom: 0;
-          min-width: 60%;
-          min-height: 60%;
+          max-width: 100vw;
+        }
+        max-width: 50%;
+        @media (min-width: 950px) {
+          max-width: 100%;
         }
       `}
     >
       <VideoHTML />
     </div>
+
     <div
       css={css`
         width: 100%;
+        text-align: left;
         min-height: 100vh;
         display: -webkit-box;
         display: -webkit-flex;
@@ -35,6 +35,11 @@ export default ({ data }) => (
         justify-content: flex-end;
         align-items: center;
         padding: 15px;
+        @media (max-width: 950px) {
+          position: relative;
+          justify-content: center;
+          max-width: 100vw;
+        }
       `}
     >
       <div

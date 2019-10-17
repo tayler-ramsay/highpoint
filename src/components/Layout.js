@@ -28,6 +28,13 @@ export default ({ children }) => {
       css={css`
         margin: 0 auto;
         max-width: 100%;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        @media (min-width: 950px) {
+          flex-direction: row;
+          align-items: center;
+        }
       `}
     >
       {" "}
