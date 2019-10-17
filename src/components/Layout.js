@@ -28,10 +28,10 @@ export default ({ children }) => {
       css={css`
         margin: 0 auto;
         max-width: 100%;
-        padding: ${rhythm(2)};
-        padding-top: ${rhythm(1.5)};
       `}
     >
+      {" "}
+      {/*
       <header style={{ marginBottom: `1.5rem` }}>
         <Link to="/" style={{ textShadow: `none`, backgroundImage: `none` }}>
           {data.site.siteMetadata.title}
@@ -39,7 +39,7 @@ export default ({ children }) => {
         <ul style={{ listStyle: `none`, float: `right` }}>
           <ListLink to="/">Home</ListLink>
         </ul>
-      </header>
+    </header> */}
       {children}
     </div>
   )

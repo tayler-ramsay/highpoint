@@ -7,14 +7,17 @@ import { graphql } from "gatsby"
 
 export default ({ data }) => (
   <Layout>
-    <h1>{data.site.siteMetadata.Offer}</h1>
     <div
       css={css`
-        z-index: -10;
-        top: 20;
-        height: 100vh;
-        position: fixed;
-        width: 100vw;
+        #myVid {
+          z-index: -20;
+          position: fixed;
+          top: 0;
+          left: 0;
+          bottom: 0;
+          min-width: 60%;
+          min-height: 60%;
+        }
       `}
     >
       <VideoHTML />
