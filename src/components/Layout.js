@@ -31,7 +31,7 @@ export default ({ children }) => {
         display: flex;
         flex-direction: column;
         text-align: center;
-        @media (min-width: 950px) {
+        @media (min-width: 1025px) {
           flex-direction: row;
           align-items: center;
         }

@@ -29,11 +29,13 @@ export default class Form extends React.Component {
     })
   }
 
+  handleChange = e => this.setState({ [e.target.name]: e.target.value });
+
   handleSubmit = e => {
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encode({ "form-name": "contact", ...this.state }),
+      body: encode({ "form-name": "demo", ...this.state }),
     })
       .then(() => alert("Success!"))
       .catch(error => alert(error))
@@ -42,14 +44,10 @@ export default class Form extends React.Component {
   }
 
   render() {
+    const { firstName, lastName, email, demo } = this.state
     return (
-      <form
-        onSubmit={this.handleSubmit}
-        className="contact100-form"
-        netlify-honeypot="bot-field"
-        data-netlify="true"
-      >
-        <input type="hidden" name="bot-field" />
+      <form onSubmit={this.handleSubmit} className="contact100-form">
+        <input type="hidden" name="form-name" value="contact" />
         {/* First Name*/}
         <div className="wrap-input100 validate-input">
           <label className="label-input100">
@@ -58,7 +56,7 @@ export default class Form extends React.Component {
               className="input100"
               name="firstName"
               type="text"
-              value={this.state.value}
+              value={firstName}
               onChange={this.handleInputChange}
             />
             <span className="focus-input100"></span>
@@ -73,7 +71,7 @@ export default class Form extends React.Component {
               className="input100"
               name="lastName"
               type="text"
-              value={this.state.value}
+              value={lastName}
               onChange={this.handleInputChange}
             />
             <span className="focus-input100"></span>
@@ -88,7 +86,7 @@ export default class Form extends React.Component {
               className="input100"
               name="email"
               type="email"
-              value={this.state.value}
+              value={email}
               onChange={this.handleInputChange}
             />
             <span className="focus-input100"></span>
@@ -103,7 +101,7 @@ export default class Form extends React.Component {
               <input
                 type="checkbox"
                 name="demo"
-                checked={this.state.demo}
+                checked={demo}
                 onChange={this.handleInputChange}
               />
               <div className="state p-info">

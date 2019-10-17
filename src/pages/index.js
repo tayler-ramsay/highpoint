@@ -12,8 +12,8 @@ export default ({ data }) => (
         #myVid {
           max-width: 100vw;
         }
-        max-width: 50%;
-        @media (min-width: 950px) {
+
+        @media (min-width: 1025px) {
           max-width: 100%;
         }
       `}
@@ -25,7 +25,6 @@ export default ({ data }) => (
       css={css`
         width: 100%;
         text-align: left;
-        min-height: 100vh;
         display: -webkit-box;
         display: -webkit-flex;
         display: -moz-box;
@@ -35,7 +34,9 @@ export default ({ data }) => (
         justify-content: flex-end;
         align-items: center;
         padding: 15px;
-        @media (max-width: 950px) {
+        min-height: 100vh;
+        @media (max-width: 1025px) {
+          min-height: 0;
           position: relative;
           justify-content: center;
           max-width: 100vw;
