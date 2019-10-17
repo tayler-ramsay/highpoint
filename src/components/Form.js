@@ -13,7 +13,6 @@ export default class Form extends React.Component {
       lastName: "",
       email: "",
       demo: true,
-      numberOfStores: 0,
     }
 
     this.handleInputChange = this.handleInputChange.bind(this)
@@ -98,15 +97,20 @@ export default class Form extends React.Component {
 
         {/* Demo */}
         <div className="wrap-input100 validate-input">
-          <label className="label-input100 dis-flex flex-m">
-            Would like a demo:
-            <input
-              className="input100"
-              name="demo"
-              type="checkbox"
-              checked={this.state.demo}
-              onChange={this.handleInputChange}
-            />
+          <label className="label-input100 dis-flex flex-m w-full flex-sb">
+            I Would like a demo:
+            <div className="pretty p-round p-fill p-icon fs-28">
+              <input
+                type="checkbox"
+                name="demo"
+                checked={this.state.demo}
+                onChange={this.handleInputChange}
+              />
+              <div className="state p-info">
+                <i className="icon mdi mdi-check"></i>
+                <label></label>
+              </div>
+            </div>
           </label>
         </div>
 

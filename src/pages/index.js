@@ -33,7 +33,7 @@ export default ({ data }) => (
         display: flex;
         flex-wrap: wrap;
         justify-content: flex-end;
-        align-items: flex-end;
+        align-items: center;
         padding: 15px;
       `}
     >

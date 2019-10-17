@@ -11,6 +11,7 @@ module.exports = {
     Offer: `Snap 2 Apply`,
   },
   plugins: [
+    `gatsby-plugin-sass`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {

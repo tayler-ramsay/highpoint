@@ -224,15 +224,13 @@ iframe {
 
 .label-input100 {
   font-family: Poppins-Regular;
-  font-size: 1.5rem;
+  font-size: 1rem;
   color: #666666;
   line-height: 1.5;
   padding-left: 5px;
 }
 
 .input100 {
-  display: block;
-  width: 100%;
   background: transparent;
   font-family: Poppins-Medium;
   font-size: 18px;
